@@ -8,12 +8,18 @@ const app = new Application({
 	width: 640,
 	height: 480
 });
+//Loader.shared.add({url:"./dino.jpg", name:"myDino"});
+//Loader.shared.add({url:"./clampy.png", name:"clampy"});
+Sprite.from("./dino.jpg");
+//Loader.shared.oncomplete.add (()=>{
 
-const clampy: Sprite = Sprite.from("./clampy.png");
+const clampy: Sprite = Sprite.from("./dino.jpg");
+console.log("Hola Mundo",clampy.width, clampy.height);
+//clampy.anchor.set(0.5);
 
-clampy.anchor.set(0.5);
-
-clampy.x = 300;
-clampy.y = 300;
+clampy.x = 0;
+clampy.y = 0;
 
 app.stage.addChild(clampy);
+//});
+//Loader.shared.load();
