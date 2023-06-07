@@ -5,8 +5,8 @@ const app = new Application({
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
 	backgroundColor: 0x6495ed,
-	width: 1280,
-	height: 720
+	width: 640,
+	height: 480
 });
 window.addEventListener("resize",()=>{
 	console.log("resized!");
@@ -16,16 +16,19 @@ window.addEventListener("resize",()=>{
 	const gameWidth = Math.round(app.screen.width * scale);
 	const gameHeight = Math.round(app.screen.height * scale) ;
 
-	//const marginHorizontal = Math.floor((window.innerWidth - gameWidth) / 2);
-	//const marginVertical = Math.floor((window.innerHeight - gameHeight) / 2);
+	const marginHorizontal = Math.floor((window.innerWidth - gameWidth) / 2) + "px";
+	const marginVertical = Math.floor((window.innerHeight - gameHeight) / 2) + "px";
+	//console.log(marginHorizontal + "H");
+	//console.log(marginVertical + "V");
 
-	app.view.style!.width = gameWidth + "px";
-	app.view.style!.height = gameHeight + "px";
+	app.renderer.resize(gameWidth, gameHeight);
+	const container = app.view.parentNode as HTMLElement ;
 
-	//app.view.style!.marginLeft = marginHorizontal + "px";
-	//app.view.style!.marginRight = marginHorizontal + "px";
-	//app.view.style!.marginTop = marginVertical + "px";
-	//app.view.style!.marginBottom = marginVertical + "px";
+	container.style.marginLeft = marginHorizontal;
+	container.style.marginRight = marginHorizontal;
+	container.style.marginTop = marginVertical;
+	container.style.marginBottom = marginVertical;
+	
 	
 })
 window.dispatchEvent(new Event("resize"));
@@ -48,7 +51,7 @@ Assets.load(["elefante","gorrito"]).then(()=>{
  festejo.x =100;
  festejo.y =200;
  console.log(gorro.toGlobal(new Point()));
- const aux = gorro.parent.toLocal(new Point(640,360));
+ const aux = gorro.parent.toLocal(new Point(0,100));
  gorro.position.x = aux.x;
  gorro.position.y = aux.y;
  
