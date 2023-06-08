@@ -18,16 +18,14 @@ window.addEventListener("resize",()=>{
 
 	const marginHorizontal = Math.floor((window.innerWidth - gameWidth) / 2) + "px";
 	const marginVertical = Math.floor((window.innerHeight - gameHeight) / 2) + "px";
-	//console.log(marginHorizontal + "H");
-	//console.log(marginVertical + "V");
+	
+	app.view.style!.width = gameWidth+"px";   
+    app.view.style!.height = gameHeight+"px";
 
-	app.renderer.resize(gameWidth, gameHeight);
-	const container = app.view.parentNode as HTMLElement ;
-
-	container.style.marginLeft = marginHorizontal;
-	container.style.marginRight = marginHorizontal;
-	container.style.marginTop = marginVertical;
-	container.style.marginBottom = marginVertical;
+    (app.view.style as any).marginLeft = marginHorizontal ;
+    (app.view.style as any).marginRight = marginHorizontal ;
+    (app.view.style as any).marginTop = marginVertical ;
+    (app.view.style as any).marginBottom = marginVertical ; 
 	
 	
 })
