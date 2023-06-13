@@ -27,32 +27,46 @@ window.addEventListener("resize",()=>{
     (app.view.style as any).marginTop = marginVertical ;
     (app.view.style as any).marginBottom = marginVertical ; 
 	
-	
 })
 window.dispatchEvent(new Event("resize"));
 
 Assets.add("elefante","./ele.png");
 Assets.add("gorrito", "./gorito_cumple.png");
+Assets.add("pez","./pez.png");
+Assets.add("gorroco","./gorrocolon.png");
 
 
-Assets.load(["elefante","gorrito"]).then(()=>{
+Assets.load(["elefante","gorrito","pez","gorroco"]).then(()=>{
  const elefante: Sprite = Sprite.from("elefante");
  const gorro: Sprite = Sprite.from("gorrito");
+ const pececito: Sprite = Sprite.from("pez");
+ const hat: Sprite = Sprite.from("gorroco");
 
  gorro.scale.set(0.18);
- gorro.position.set(115,0);
+ gorro.position.set(0,0);
  const festejo: Container = new Container();
  
  festejo.addChild(elefante);
  festejo.addChild(gorro);
  festejo.scale.set(0.5);
- festejo.x =100;
- festejo.y =200;
+ festejo.x =10;
+ festejo.y =10;
  console.log(gorro.toGlobal(new Point()));
- const aux = gorro.parent.toLocal(new Point(0,100));
+ const aux = gorro.parent.toLocal(new Point(67,10));
  gorro.position.x = aux.x;
  gorro.position.y = aux.y;
- 
-
  app.stage.addChild(festejo);
+
+ const mar: Container = new Container();
+ mar.addChild(pececito);
+ mar.addChild(hat);
+ pececito.scale.set(0.20);
+ pececito.position.set(150,10);
+ hat.scale.set(0.1);
+ hat.position.set(45,20);
+ mar.x = 150;
+ mar.y = 10;
+
+ app.stage.addChild(mar);
+
 });
