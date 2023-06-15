@@ -1,10 +1,12 @@
-import { Application, Assets, Container, Point, Sprite } from 'pixi.js'
+import { Application, Assets } from 'pixi.js'
+import { assets } from './assets';
+import { Scene } from './Scene';
 
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
-	backgroundColor: 0x6495ed,
+	backgroundColor: 0x6450ed,
 	width: 640,
 	height: 480
 });
@@ -30,43 +32,10 @@ window.addEventListener("resize",()=>{
 })
 window.dispatchEvent(new Event("resize"));
 
-Assets.add("elefante","./ele.png");
-Assets.add("gorrito", "./gorito_cumple.png");
-Assets.add("pez","./pez.png");
-Assets.add("gorroco","./gorrocolon.png");
+Assets.addBundle("myAssets", assets); 
+Assets.loadBundle(["myAssets"]).then(() => {
 
-
-Assets.load(["elefante","gorrito","pez","gorroco"]).then(()=>{
- const elefante: Sprite = Sprite.from("elefante");
- const gorro: Sprite = Sprite.from("gorrito");
- const pececito: Sprite = Sprite.from("pez");
- const hat: Sprite = Sprite.from("gorroco");
-
- gorro.scale.set(0.18);
- gorro.position.set(0,0);
- const festejo: Container = new Container();
- 
- festejo.addChild(elefante);
- festejo.addChild(gorro);
- festejo.scale.set(0.5);
- festejo.x =10;
- festejo.y =10;
- console.log(gorro.toGlobal(new Point()));
- const aux = gorro.parent.toLocal(new Point(67,10));
- gorro.position.x = aux.x;
- gorro.position.y = aux.y;
- app.stage.addChild(festejo);
-
- const mar: Container = new Container();
- mar.addChild(pececito);
- mar.addChild(hat);
- pececito.scale.set(0.20);
- pececito.position.set(150,10);
- hat.scale.set(0.1);
- hat.position.set(45,20);
- mar.x = 150;
- mar.y = 10;
-
- app.stage.addChild(mar);
+ const myScene= new Scene();
+  app.stage.addChild(myScene);
 
 });
