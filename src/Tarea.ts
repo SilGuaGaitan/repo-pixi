@@ -11,17 +11,17 @@ export class Tarea extends Container {
     const cuadro:Graphics = new Graphics();
         cuadro.lineStyle(1, 0xFFFFFF, 1);
         cuadro.beginFill(0xFFFFFF,1);
-        cuadro.moveTo(160,60);
-        cuadro.lineTo(500,60);
-        cuadro.lineTo(500,400);
-        cuadro.lineTo(160,400);
-        cuadro.lineTo(160,60);
+        cuadro.moveTo(175,60);
+        cuadro.lineTo(495,60);
+        cuadro.lineTo(495,400);
+        cuadro.lineTo(175,400);
+        cuadro.lineTo(175,60);
         cuadro.endFill();
         this.addChild(cuadro);
 
      const liston: Sprite = Sprite.from("liston");
-        liston.scale.set(0.1);
-        liston.position.set(170,80);
+        liston.scale.set(0.5);
+        liston.position.set(150,17);
         this.addChild(liston);  
    
     
