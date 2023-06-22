@@ -23,16 +23,13 @@ export class Tarea extends Container {
         liston.scale.set(0.5);
         liston.position.set(150,17);
         this.addChild(liston);  
-   
-    
-    }
+   }
 }
 export class Estrella extends Container{
     constructor(){
         super();
         const estre: Sprite = Sprite.from("estrellaa");
             estre.scale.set(0.09);
-           
             this.addChild(estre);
     }
 }
