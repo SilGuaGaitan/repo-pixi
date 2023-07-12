@@ -1,6 +1,6 @@
 import { Application, Assets } from 'pixi.js'
-import { assets } from './assets2';
-import { Scene } from './Scene2';
+import { assets } from './assets';
+import { Scene } from './Scene';
 
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -35,7 +35,7 @@ window.dispatchEvent(new Event("resize"));
 Assets.addBundle("myAssets", assets); 
 Assets.loadBundle(["myAssets"]).then(() => {
 
- const myScene2= new Scene();
-  app.stage.addChild(myScene2);
+ const myScene= new Scene();
+  app.stage.addChild(myScene);
 
 });

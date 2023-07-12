@@ -20,7 +20,11 @@ export class Scene extends Container{
         const puntnum:Text = new Text("123.012.332",{fontSize:25, fill:0x298DB9, fontFamily:"Arial"});
             puntnum.position.set(350,185);
             this.addChild(puntnum);
-            this.boton = new Boton(Texture.from("botonok"), Texture.from("botonover"), Texture.from("botonon"),);
+            this.boton = new Boton(
+                Texture.from("botonok"), 
+                Texture.from("botonokover"), 
+                Texture.from("botonokon"),
+                this.onBotonclick);
             this.boton.scale.set(0.1);
             this.boton.position.set(200,300);
             this.boton.interactive = true;
@@ -42,6 +46,14 @@ export class Scene extends Container{
         const estrella3:Estrella = new Estrella();
             estrella3.position.set(360,230);
             this.addChild(estrella3);   
+
+        /*const lastKeyPressed:Text = new Text("Waiting...",{fontSize:48});
+                lastKeyPressed.anchor.set(0.5);
+                lastKeyPressed.x = 100;
+                lastKeyPressed.y = 100;
+                this.addChild(lastKeyPressed);*/
     }
-   
+    private onBotonclick():void{
+        console.log("el boton fue clickeado");
+    }
 }

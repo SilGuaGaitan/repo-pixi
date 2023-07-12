@@ -7,14 +7,14 @@ export class Boton extends Container{
     private callback: Function;
     private spr: Sprite;
 
-    constructor(def: Texture, down: Texture, over: Texture, callback: Function);
+    constructor(def: Texture, down: Texture, over: Texture, callback: Function)
     {
         super();
         this.def= def;
         this.down= down;
         this.over= over;
+        this.callback = callback;
         this.spr= Sprite.from(def);
-        this.spr.anchor.set(0,1);
         this.addChild(this.spr);
         this.spr.interactive = true;
         this.spr.on("mousedown",this.onMouseDown,this);
