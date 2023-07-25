@@ -1,13 +1,12 @@
-import { AnimatedSprite, Container, Texture,/*,Graphics, Text*/
-Ticker} from "pixi.js";
-/*import { Festejo } from "./Festejo";*/
+import { AnimatedSprite, Container, Texture,Graphics, Text} from "pixi.js";
+import { Festejo } from "./Festejo";
 
 export class Scene extends Container{
     catAnimated: any;
     constructor()
     {
         super();
-        /*const festejo: Festejo = new Festejo();
+        const festejo: Festejo = new Festejo();
         festejo.scale.set(0.5);
         festejo.x =100;
         festejo.y =300;
@@ -16,7 +15,7 @@ export class Scene extends Container{
         const festejo2: Festejo = new Festejo();
         festejo2.x =150;
         festejo2.y =350;
-        this.addChild(festejo2);*/
+        this.addChild(festejo2);
 
         this.catAnimated = new AnimatedSprite(
             [
@@ -33,8 +32,8 @@ export class Scene extends Container{
             this.catAnimated.play();
             this.catAnimated.animationSpeed = 0.35;
         this.addChild(this.catAnimated);
-        Ticker.shared.add(this.update, this);
-        /*const myGraph: Graphics = new Graphics();
+       
+        const myGraph: Graphics = new Graphics();
         myGraph.lineStyle( 2, 0xFF00FF, 1 );
         myGraph.moveTo(0,0);
         myGraph.lineTo(200,300);
@@ -48,21 +47,9 @@ export class Scene extends Container{
         this.addChild(myGraph);
 
         const myText:Text = new Text("Aguante Santa Fe",{fontSize:50, fill:0x00FF00,fontFamily:"Arial"});
-        this.addChild(myText);*/
+        this.addChild(myText);
 
 
     }
-    private update(deltaFrame:number){
-       /* deltaFrame =deltaFrame * 0;*/
-       // this.catAnimated.x++;//
-        this.catAnimated.update(deltaFrame);
-        /*console.log(deltaFrame, Ticker.shared.FPS);*/
-        if (Keyboard.state.get("keyA"))
-        {
-            this.catAnimated.x++;
-        }
-        for (let index =0;index < 150000000; index ++){
-            1+1;
-        }
+   
     }
-}

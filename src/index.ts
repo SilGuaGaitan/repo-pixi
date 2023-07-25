@@ -1,6 +1,7 @@
-import { Application, Assets } from 'pixi.js'
-import { assets } from './assets';
-import { Scene } from './Scene';
+import { Application, Assets } from "pixi.js";
+import { assets } from "./assets";
+import { UIDemo } from "./ui/UIDemo";
+//import { KeyBoard } from "./util/keyboard";
 
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -10,6 +11,7 @@ const app = new Application({
 	width: 640,
 	height: 480
 });
+//KeyBoard.initialize();
 window.addEventListener("resize",()=>{
 	console.log("resized!");
 	const scaleX = window.innerWidth / app.screen.width;
@@ -35,7 +37,10 @@ window.dispatchEvent(new Event("resize"));
 Assets.addBundle("myAssets", assets); 
 Assets.loadBundle(["myAssets"]).then(() => {
 
- const myScene= new Scene();
+ const myScene= new UIDemo();
   app.stage.addChild(myScene);
+ // Ticker.shared.add(function(deltaFrame){
+	//myScene.update(Ticker.shared.deltaMS);
+  
 
 });

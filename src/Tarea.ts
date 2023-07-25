@@ -1,4 +1,4 @@
-import { Container, Graphics, Sprite } from "pixi.js";
+import { Container,Graphics, Sprite } from "pixi.js";
 
 export class Tarea extends Container {
     constructor(){
@@ -19,10 +19,7 @@ export class Tarea extends Container {
         cuadro.endFill();
         this.addChild(cuadro);
 
-     const liston: Sprite = Sprite.from("liston");
-        liston.scale.set(0.5);
-        liston.position.set(150,17);
-        this.addChild(liston);  
+    
    }
 }
 export class Estrella extends Container{

@@ -1,6 +1,5 @@
 export const assets = {
-   liston:"./panel/boton_amarillo.png",
-   estrella:"./panel/estrella negra.png",
+
    estrellaa:"./panel/estrella dorada.png",
    fondo:"./panel/fondo_estrella.jpg",
    botonc:"./panel/boton-cerrar.png",
@@ -8,6 +7,6 @@ export const assets = {
    botonokover:"./panel/boton-ok-over.png",
    botonokon:"./panel/boton-ok-on.png",
    botoncon:"./panel/boton-config.png",
-   botonv:"./panel/boton_verde.png",
+   
 
 }
