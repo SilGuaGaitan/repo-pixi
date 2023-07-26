@@ -54,8 +54,8 @@ export class Scene extends Container {
                 lastKeyPressed.x = 100;
                 lastKeyPressed.y = 300;
                 this.addChild(lastKeyPressed);
-                KeyBoard.down.on("keyB",this.onKeyB, this);
-                KeyBoard.up.on("keyB", this.onKeyBup, this);
+                KeyBoard.down.on("KeyB",this.onKeyB, this);
+                KeyBoard.up.on("KeyB", this.onKeyBup, this);
            
     }
    
