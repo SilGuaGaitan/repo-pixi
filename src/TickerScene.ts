@@ -1,12 +1,16 @@
-import { AnimatedSprite, Container, Texture, Ticker} from "pixi.js";
+import { AnimatedSprite, Texture, Sprite} from "pixi.js";
+import { Scenebase } from "./Scenebase";
+//import { KeyBoard } from "./util/keyboard";
 
-export class Scene extends Container{
+export class Scene extends Scenebase{
     catAnimated: any;
     constructor()
     {
         super();
-       
-
+        const background =Sprite.from("selva");
+            background.width=640;
+            background.height=480;
+            this.addChild(background);
         this.catAnimated = new AnimatedSprite(
             [
                 Texture.from("cat1"),
@@ -22,16 +26,22 @@ export class Scene extends Container{
             this.catAnimated.play();
             this.catAnimated.animationSpeed = 0.35;
             this.addChild(this.catAnimated);
-            Ticker.shared.add(this.update,this);
+           // Ticker.shared.add(this.update,this);
     }
-    private update(deltaFrame:number){
-        deltaFrame = deltaFrame * 0.25;
-        this.catAnimated.x ++;
-        this.catAnimated.y ++;
+    public override update(_deltaTime:number, deltaFrame: number){
         this.catAnimated.update(deltaFrame);
-        console.log(deltaFrame, Ticker.shared.FPS);
+    }
+    /*private update(deltaFrame:number){
+        deltaFrame = deltaFrame * 0.25;
+       
+        //this.catAnimated.y ++;
+        this.catAnimated.update(deltaFrame);
+        if (KeyBoard.state.get("KeyB")){
+            this.catAnimated.x ++;
+        }
+
       /*  for (let index = 0 ; index < 1500000; index + 1){
          1+1;
-        } */
-    }
+        } 
+    }*/
 }

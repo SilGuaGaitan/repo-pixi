@@ -1,7 +1,6 @@
 import { Container, Sprite, Text , Texture } from "pixi.js";
 import { Tarea , Estrella  } from "./Tarea";
 import { Boton }  from "./Boton";
-import { KeyBoard } from "./util/keyboard";
 
 export class Scene extends Container {
    private boton:Boton;
@@ -47,23 +46,7 @@ export class Scene extends Container {
         const estrella3:Estrella = new Estrella();
             estrella3.position.set(360,230);
             this.addChild(estrella3);
-        
-
-        const lastKeyPressed:Text = new Text("Waiting...",{fontSize:48, fill:0xFFFFFF});
-                lastKeyPressed.anchor.set(0.5);
-                lastKeyPressed.x = 100;
-                lastKeyPressed.y = 300;
-                this.addChild(lastKeyPressed);
-                KeyBoard.down.on("KeyB",this.onKeyB, this);
-                KeyBoard.up.on("KeyB", this.onKeyBup, this);
-           
-    }
-   
-    private onKeyB():void{
-        console.log("aprete la B", this);
-    }
-    private onKeyBup():void{
-        console.log("solte la B", this);
+              
     }
 }
 
