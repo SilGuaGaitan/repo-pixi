@@ -1,8 +1,7 @@
-import { AnimatedSprite, Texture, Sprite} from "pixi.js";
-import { Scenebase } from "./Scenebase";
-//import { KeyBoard } from "./util/keyboard";
+import { AnimatedSprite, Texture, Sprite, Container} from "pixi.js";
+import { IUpdateable } from "./IUpdateable";
 
-export class Scene extends Scenebase{
+export class TickerScene extends Container implements IUpdateable{
     catAnimated: any;
     constructor()
     {
@@ -23,25 +22,18 @@ export class Scene extends Scenebase{
             false
             );
             this.catAnimated.scale.set(0.5);
+            this.catAnimated.y =340;
             this.catAnimated.play();
             this.catAnimated.animationSpeed = 0.35;
             this.addChild(this.catAnimated);
-           // Ticker.shared.add(this.update,this);
+         
     }
-    public override update(_deltaTime:number, deltaFrame: number){
+    public update(_deltaTime: number, deltaFrame: number | undefined): void {
         this.catAnimated.update(deltaFrame);
+        this.catAnimated.x ++;
+        for(let index = 0; index< 15000000;index++)
+        1+1;
     }
-    /*private update(deltaFrame:number){
-        deltaFrame = deltaFrame * 0.25;
-       
-        //this.catAnimated.y ++;
-        this.catAnimated.update(deltaFrame);
-        if (KeyBoard.state.get("KeyB")){
-            this.catAnimated.x ++;
-        }
-
-      /*  for (let index = 0 ; index < 1500000; index + 1){
-         1+1;
-        } 
-    }*/
+   
+   
 }

@@ -1,9 +1,8 @@
 import { Application, Assets, Ticker } from "pixi.js";
 import { assets } from "./assets";
-//import{Scene} from "./Scene.1";
-//import{UIDemo}from "./ui/UIDemo";
 import { KeyBoard } from "./util/keyboard";
-import{Scene} from "./TickerScene";
+import { TickerScene } from "./TickerScene";
+
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
 	resolution: window.devicePixelRatio || 1,
@@ -38,7 +37,7 @@ window.dispatchEvent(new Event("resize"));
 Assets.addBundle("myAssets", assets); 
 Assets.loadBundle(["myAssets"]).then(() => {
 
- const myScene= new Scene();
+ const myScene= new TickerScene();
   app.stage.addChild(myScene);
   Ticker.shared.add(function(deltaFrame){
 	myScene.update(Ticker.shared.deltaMS,deltaFrame);
