@@ -3,13 +3,16 @@ import { assets } from "./assets";
 import { KeyBoard } from "./util/keyboard";
 import { TickerScene } from "./TickerScene";
 
+export const WIDTH=640;
+export const HEIGHT=480;
+
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
 	backgroundColor: 0xFFFFFF,
-	width: 640,
-	height: 480
+	width: WIDTH,
+	height: HEIGHT
 });
 KeyBoard.initialize();
 window.addEventListener("resize",()=>{
