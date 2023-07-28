@@ -34,8 +34,8 @@ export class TickerScene extends Container implements IUpdateable{
 
             this.physCat = new PhsicContainer();
             this.physCat.speed.x = 50;
-            this.physCat.speed.y = 0;
-            this.physCat.aceleration.y = 800;
+            this.physCat.speed.y = 50;
+           /* this.physCat.aceleration.y = 800;*/
             this.addChild(this.physCat);
             const auxzero= new Graphics();
             auxzero.beginFill(0xFF00FF);
@@ -67,10 +67,16 @@ export class TickerScene extends Container implements IUpdateable{
         {
             this.physCat.y = HEIGHT;
         
-            this.physCat.speed.y = -800 *Math.random();
+            /*this.physCat.speed.y = -800 *Math.random();*/
+            this.physCat.speed.y= -this.physCat.speed.y;
             this.catAnimated.tint= 0xFFFF00;
         }
-        
+        else if (this.physCat.y<0)
+        {
+            this.physCat.y=0;
+            this.physCat.speed.y= -this.physCat.speed.y;
+            this.catAnimated.tint= 0xFFFFF0;
+        }
         
         /* for(let index = 0; index< 15000000;index++)
         1+1;*/
