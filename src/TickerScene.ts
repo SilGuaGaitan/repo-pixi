@@ -54,7 +54,7 @@ export class TickerScene extends Container implements IUpdateable{
             this.physCat.x = WIDTH;
             this.physCat.speed.x=Math.abs(this.physCat.speed.x) * -1;
             this.physCat.scale.x = -1;
-            this.catAnimated.tint=0x000000;
+            this.catAnimated.tint=0xFF00FF;
         }
         else if (this.physCat.x < 0)
         {
