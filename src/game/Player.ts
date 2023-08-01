@@ -48,11 +48,11 @@ export class Player extends PhsicContainer implements IHitbox
             this.aceleration.y = Player.GRAVITY;
             KeyBoard.down.on("ArrowUp", this.jump,this);
     }
-    /*public override destroy(options?:any)
+    public override destroy(options?:any)
     {
        super.destroy(options);        
        KeyBoard.down.off("ArrowUp",this.jump,this);
-    }*/
+    }
 
     public override update(deltaMS:number)
     {  super.update(deltaMS/1000);

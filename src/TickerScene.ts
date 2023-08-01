@@ -12,7 +12,8 @@ export class TickerScene extends Container implements IUpdateable{
     private world:Container;
     private background: TilingSprite;
     private gamespeed:number =100;
-   // private timepassed:number=0;
+    private timepassed:number=0;
+    platform: any;
     constructor()
     {
         super();
@@ -35,10 +36,24 @@ export class TickerScene extends Container implements IUpdateable{
            
             
         this.playerCat = new Player();
+        this.playerCat.x=100;
+        this.playerCat.y=100;
+        this.playerCat.scale.set(0.8);
         this.world.addChild(this.playerCat);  
         this.addChild(this.world);          
     }
     public update(deltaTime: number, _deltaFrame: number): void {
+        this.timepassed+= deltaTime;
+        if(this.timepassed > (2000* 200/this.gamespeed))
+        {
+            this.gamespeed +=50;
+            this.timepassed=0;
+            const plat = new Platform();
+            plat.scale.set(0.25);
+            plat.position.set(WIDTH,Math.random()*480) ;
+            this.world.addChild(plat);
+            this.platforms.push(plat);   
+        }
         this.playerCat.update(deltaTime);
         for (let platform of this.platforms){
             platform.speed.x=-this.gamespeed;
@@ -49,22 +64,13 @@ export class TickerScene extends Container implements IUpdateable{
             this.playerCat.separate(overlap, platform.position);
            
          }
+         if(this.platform.gethitbox().right< 0)
+         {
+            platform.destroy();
+         }
         }
-       /* if (this.playerCat.x > WIDTH )
-        {
-            this.playerCat.x = WIDTH;
-        }
-        else if (this.playerCat.x < 0)
-        {
-            this.playerCat.x =0;
-        }
-        if (this.playerCat.y > HEIGHT)
-        {
-            this.playerCat.canjump= true;
-            this.playerCat.y = HEIGHT;
-            
-        }*/
-       // this.world.x=-this.playerCat.x * this.worldTransform.a + WIDTH/4;
+        this.platforms =this.platforms.filter((elem)=>!elem.destroyed);
+        console.log(this.platforms.length);
         this.background.tilePosition.x -= this.gamespeed * deltaTime/1000;       
        
     }
