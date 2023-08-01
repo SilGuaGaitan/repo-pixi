@@ -1,7 +1,8 @@
-import { Container, Graphics, Rectangle, Sprite } from "pixi.js"
+import { Graphics, Rectangle, Sprite } from "pixi.js"
 import { IHitbox } from "./IHitbox";
+import { PhsicContainer } from "./PhsicContainer";
 
-export class Platform extends Container implements IHitbox
+export class Platform extends PhsicContainer implements IHitbox
 {
     hitbox: Graphics;
     constructor()
@@ -15,6 +16,7 @@ export class Platform extends Container implements IHitbox
             this.hitbox.drawRect(0,0,830,150);
             this.hitbox.endFill();
             this.addChild(this.hitbox);
+            
     }
     public gethitbox():Rectangle
     {

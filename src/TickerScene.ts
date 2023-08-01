@@ -1,4 +1,4 @@
-import { Container, Sprite} from "pixi.js";
+import { Container, Texture, TilingSprite} from "pixi.js";
 import { IUpdateable } from "./IUpdateable";
 
 import { HEIGHT, WIDTH } from ".";
@@ -7,34 +7,42 @@ import { Platform } from "./game/Platform";
 import { checkcollision } from "./game/IHitbox";
 
 export class TickerScene extends Container implements IUpdateable{
-   private playerCat: Player;
+    private playerCat: Player;
     private platforms :Platform[];
+    private world:Container;
+    private background: TilingSprite;
+    private gamespeed:number =100;
+   // private timepassed:number=0;
     constructor()
     {
         super();
-        const background = Sprite.from("selva");
-            background.width=640;
-            background.height=480;
-            this.addChild(background);
+        this.world =new Container();
+        this.background = new TilingSprite(Texture.from("selva"),WIDTH ,HEIGHT);
+            this.addChild(this.background);
+
         this.platforms=[];
-        const plat = new Platform();
+        let plat = new Platform();
             plat.scale.set(0.25);
             plat.position.set(90,400) ;
-            this.addChild(plat);
+            this.world.addChild(plat);
             this.platforms.push(plat);
-        const plat2 = new Platform();
-         plat2.scale.set(0.25);
-            plat2.position.set(300,300);
-            this.addChild(plat2);
-            this.platforms.push(plat2);
+       
+            plat = new Platform();
+            plat.scale.set(0.25);
+            plat.position.set(400,300);
+            this.world.addChild(plat);
+            this.platforms.push(plat); 
+           
             
         this.playerCat = new Player();
-        this.addChild(this.playerCat);            
+        this.world.addChild(this.playerCat);  
+        this.addChild(this.world);          
     }
     public update(deltaTime: number, _deltaFrame: number): void {
         this.playerCat.update(deltaTime);
         for (let platform of this.platforms){
-    
+            platform.speed.x=-this.gamespeed;
+            platform.update(deltaTime/1000);
          const overlap =checkcollision(this.playerCat, platform);
          if(overlap != null)
          {
@@ -42,7 +50,7 @@ export class TickerScene extends Container implements IUpdateable{
            
          }
         }
-        if (this.playerCat.x > WIDTH )
+       /* if (this.playerCat.x > WIDTH )
         {
             this.playerCat.x = WIDTH;
         }
@@ -54,12 +62,11 @@ export class TickerScene extends Container implements IUpdateable{
         {
             this.playerCat.canjump= true;
             this.playerCat.y = HEIGHT;
-            this.playerCat.speed.y =0;
-        }
+            
+        }*/
+       // this.world.x=-this.playerCat.x * this.worldTransform.a + WIDTH/4;
+        this.background.tilePosition.x -= this.gamespeed * deltaTime/1000;       
        
-        
-        /* for(let index = 0; index< 15000000;index++)
-        1+1;*/
     }
    
    
