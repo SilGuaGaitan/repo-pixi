@@ -9,6 +9,7 @@ export const assets = {
     cat5:"./gatito/gatito5.png",
     cat6:"./gatito/gatito6.png",
     selva:"./gatito/selva.jpg",
+    plat:"./gatito/platcomp.png",
    
     estrellaa:"./panel/estrella dorada.png",
     fondo:"./panel/fondo_estrella.jpg",
