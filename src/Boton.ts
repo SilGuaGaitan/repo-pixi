@@ -1,6 +1,9 @@
 import { Container, Sprite, Texture } from "pixi.js";
 
+
 export class Boton extends Container{
+
+    
     private def: Texture;
     private down: Texture;
     private over: Texture;
@@ -43,5 +46,6 @@ export class Boton extends Container{
         console.log("mouse exit",this);
         this.spr.texture = this.def;
     }
+
    
 }

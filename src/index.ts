@@ -1,7 +1,8 @@
 import { Application, Assets, Ticker } from "pixi.js";
 import { assets } from "./assets";
 import { KeyBoard } from "./util/keyboard";
-import { TickerScene } from "./TickerScene";
+//import { TickerScene } from "./TickerScene";
+import { SoundScene } from "./Scenes/SoundScene";
 
 export const WIDTH=640;
 export const HEIGHT=480;
@@ -40,10 +41,10 @@ window.dispatchEvent(new Event("resize"));
 Assets.addBundle("myAssets", assets); 
 Assets.loadBundle(["myAssets"]).then(() => {
 
- const myScene= new TickerScene();
+ const myScene= new SoundScene();
   app.stage.addChild(myScene);
-  Ticker.shared.add(function(deltaFrame){
+  /*Ticker.shared.add(function(deltaFrame){
 	myScene.update(Ticker.shared.deltaMS,deltaFrame);
   
-  })
+  })*/
 });

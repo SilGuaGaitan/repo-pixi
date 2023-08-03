@@ -1,6 +1,11 @@
 export const assets = {
     elefante: "./ele.png",
     gorrito: "./gorito_cumple.png",
+    espada:"./demo/espada.png",
+    nota:"./demo/nota.png",
+    mas:"./demo/mas.png",
+    menos:"./demo/menos.png",
+    sonido:"./Sonido/espada.mp3",
 
     cat1:"./gatito/gatito1.png",
     cat2:"./gatito/gatito2.png",
