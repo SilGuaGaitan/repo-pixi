@@ -1,4 +1,4 @@
-import { Application, Assets, Ticker } from "pixi.js";
+import { Application, Assets } from "pixi.js";
 import { assets } from "./assets";
 import { KeyBoard } from "./util/keyboard";
 //import { TickerScene } from "./TickerScene";

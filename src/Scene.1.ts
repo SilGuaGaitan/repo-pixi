@@ -1,6 +1,6 @@
 import { Container, Sprite, Text , Texture } from "pixi.js";
 import { Tarea , Estrella  } from "./Tarea";
-import { Boton }  from "./Boton";
+import { Boton }  from "./util/Boton";
 
 export class Scene extends Container {
    private boton:Boton;

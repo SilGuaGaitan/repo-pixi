@@ -1,60 +1,53 @@
-import { Container, Texture } from "pixi.js";
-import { IUpdateable } from "../IUpdateable";
 import { sound } from "@pixi/sound";
-import { Boton } from "../Boton";
+import { Container, Sprite } from "pixi.js"
 
-export class SoundScene extends Container implements IUpdateable
-{
-    constructor()
+export class SoundScene extends Container
+{ constructor()
     {
         super();
-        const snd =sound.play("sonido");
-        //snd.volume =0.1;
-        /*const allCont =new Container();
-        this.addChild(allCont);
-       /* allCont.scale.set(3);*/
+        sound.play("sonido");
+        const cont =new Container();
+        this.addChild(cont);
 
-        const btnSword = new Boton (Texture.from("espada"));
-        btnSword.position.set(100,100);
+        const btnSword=  Sprite.from("espada");
         btnSword.scale.set(0.5);
-        btnSword.on(Boton.CLIKED_EVENT, this.swordSound, this);
+        btnSword.position.set(100,100);
         this.addChild(btnSword);
+        btnSword.on("mousedown",this.onMouseDown, this);
+        btnSword.interactive =true;
 
-        const btnVolumenUp =new Boton(Texture.from("mas"));
-        btnVolumenUp.position.set(350,150);
-        btnVolumenUp.scale.set(0.2);
-        //btnVolumenUp.on(Boton.CLIKED_EVENT, this.VolumenUp, this);
-        this.addChild(btnVolumenUp);
+        const btnmas= Sprite.from("mas");
+        btnmas.scale.set(0.2);
+        btnmas.position.set(350,200);
+        this.addChild(btnmas);
+        btnmas.on("mousedown",this.VolumenOn,this);
+        btnmas.interactive=true;
 
-        const btnVolumenDown = new Boton(Texture.from("menos"));
-        btnVolumenDown.position.set(350,300);
-        btnVolumenDown.scale.set(0.2);
-        //btnVolumenDown.on(Boton.CLIKED_EVENT, this.VolumenDown, this);
-        this.addChild(btnVolumenDown);
+        const btnmenos=Sprite.from("menos");
+        btnmenos.scale.set(0.2);
+        btnmenos.position.set(350,300);
+        this.addChild(btnmenos);
+        btnmenos.on("mousedown",this.VolumenDown,this);
+        btnmenos.interactive=true;
 
-        const toggleMute =new Boton(Texture.from("nota"));
-        toggleMute.position.set(450,200);
-        toggleMute.scale.set(0.5);
-        //toggleMute.on(Boton.CLIKED_EVENT, this.toggleMute, this);
-        this.addChild(toggleMute);
+        
+
 
     }
- 
-   /* public VolumenUp()
+    private onMouseDown():void
     {
-      sound.volume("espada",2);
+        sound.play("sonido");
+        console.log("sono la espada");
     }
-    public VolumenDown()
+    private VolumenOn():void
     {
-      sound.volume("espada",0.1);
+        sound.play("sonido",{volume:5});
+        console.log("sono la espada mas alto");
     }
-    public toggleMute(_mute:boolean)
+    private VolumenDown():void
     {
-      sound.toggleMuteAll();
-    }*/
-    public swordSound()
-    {
-      sound.play("espada");
-    }
-  
+        sound.play("sonido",{volume:0.1});
+        console.log("sono la espada mas bajo");
+    } 
+
 }
