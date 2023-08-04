@@ -2,8 +2,10 @@ import { sound } from "@pixi/sound";
 import { Container, Sprite } from "pixi.js"
 
 export class SoundScene extends Container
-{ constructor()
-    {
+
+{   public mutev:boolean=true;
+     constructor()
+    {  
         super();
         sound.play("sonido");
         const cont =new Container();
@@ -30,24 +32,46 @@ export class SoundScene extends Container
         btnmenos.on("mousedown",this.VolumenDown,this);
         btnmenos.interactive=true;
 
-        
+        const togglemute = Sprite.from("nota");
+        togglemute.scale.set(0.2);
+        togglemute.position.set(450,300);
+        this.addChild(togglemute);
+        togglemute.on("mousedown", this.toggleMute, this);
+        togglemute.interactive=true;
 
 
     }
-    private onMouseDown():void
+   
+    public onMouseDown():void
     {
-        sound.play("sonido");
+        sound.play("sonido", {volume:1, loop:true});
         console.log("sono la espada");
     }
-    private VolumenOn():void
+    public VolumenOn():void
     {
-        sound.play("sonido",{volume:5});
+        sound.volumeAll += 0.5;
         console.log("sono la espada mas alto");
     }
-    private VolumenDown():void
+    public VolumenDown():void
     {
-        sound.play("sonido",{volume:0.1});
+        sound.volumeAll -= 0.5;
         console.log("sono la espada mas bajo");
+    } 
+    public toggleMute(): void
+    {  
+        if(!this.mutev)
+        {
+                sound.muteAll();
+                console.log(" Volumen Muteado");
+                this.mutev=true;
+        }
+        else
+        {
+            sound.unmuteAll();
+            console.log("Volumen Habilitado");
+            this.mutev =false;
+        }
+        
     } 
 
 }
