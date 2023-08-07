@@ -1,11 +1,11 @@
 export const assets = {
     elefante: "./ele.png",
     gorrito: "./gorito_cumple.png",
-    espada:"./demo/espada.png",
+    /*espada:"./demo/espada.png",
     nota:"./demo/nota.png",
     mas:"./demo/mas.png",
     menos:"./demo/menos.png",
-    sonido:"./Sonido/espada.mp3",
+    sonido:"./Sonido/espada.mp3",*/
 
     cat1:"./gatito/gatito1.png",
     cat2:"./gatito/gatito2.png",
@@ -29,8 +29,12 @@ export const assets = {
     mouse:"./demo/mouse.png",
     //mousedown:"./demo/mousedown.png",
     //mouseover:"./demo/mouseover.png",
-    pointer:"./demo/pointer.png"
-
+    pointer:"./demo/pointer.png",
+    mifuente:"./Fuentes/VioletSans-Regular.ttf",
+    fuente2:"./Fuentes/Minecraft.ttf",
+    fuente1:"./Fuentes/Mario-Kart-DS.ttf"
+    /*fuente: "https://fonts.googleapis.com/css2?family=Borel&display=swap"*/
+  
 }
 
     

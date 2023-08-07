@@ -1,8 +1,9 @@
-import { Application, Assets } from "pixi.js";
+import { Application, Assets, BitmapFont, TextStyle } from "pixi.js";
 import { assets } from "./assets";
 import { KeyBoard } from "./util/keyboard";
+import { TextScene } from "./Scenes/TextScene";
 //import { TickerScene } from "./TickerScene";
-import { SoundScene } from "./Scenes/SoundScene";
+//import { SoundScene } from "./Scenes/SoundScene";
 
 export const WIDTH=640;
 export const HEIGHT=480;
@@ -39,9 +40,21 @@ window.addEventListener("resize",()=>{
 window.dispatchEvent(new Event("resize"));
 
 Assets.addBundle("myAssets", assets); 
-Assets.loadBundle(["myAssets"]).then(() => {
 
- const myScene= new SoundScene();
+Assets.loadBundle(["myAssets"]).then(() => {
+	const aux=new TextStyle({
+		align: "center",
+        fill: [
+            "#0c5764",
+            "#FF00FF"
+        ],
+        fontFamily: "fuente1",
+        fontSize: 100
+       
+	})
+	BitmapFont.from("MiBitMap",aux);
+
+ const myScene= new TextScene();
   app.stage.addChild(myScene);
   /*Ticker.shared.add(function(deltaFrame){
 	myScene.update(Ticker.shared.deltaMS,deltaFrame);
