@@ -3,7 +3,7 @@ import { BitmapText, Container, Text, TextStyle } from "pixi.js";
 export class TextScene extends Container
 {
  constructor()
- {
+ {  
     super();
     const tStyle = new TextStyle({
         align: "center",
@@ -14,7 +14,7 @@ export class TextScene extends Container
             "#00FF00"
         ],
         fillGradientType: 1,
-        fontFamily: " ",
+        fontFamily: "Mario Kart DS ",
         fontSize: 90,
         fontStyle: "italic",
         fontVariant: "small-caps",
@@ -25,8 +25,13 @@ export class TextScene extends Container
     const t =new Text("Hola Mundo", tStyle);
     this.addChild(t);
 
-    const nt= new BitmapText("Hola Mundo!!",{fontName:"MiBitMap"});
-     nt.y=300;
+    const bt= new BitmapText("Hola F@cking Mundo!!",{fontName:"MiBitMap"});
+     bt.y=300;
+     this.addChild(bt);
+
+     const nt=new Text("HELLO",{fontFamily:"fuente"});
+     nt.y=150;
      this.addChild(nt);
  }
+   
 }

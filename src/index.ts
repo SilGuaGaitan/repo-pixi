@@ -48,11 +48,11 @@ Assets.loadBundle(["myAssets"]).then(() => {
             "#0c5764",
             "#FF00FF"
         ],
-        fontFamily: "fuente1",
-        fontSize: 100
+        fontFamily: "Minecraft",
+        fontSize: 60
        
 	})
-	BitmapFont.from("MiBitMap",aux);
+	BitmapFont.from("MiBitMap",aux,{chars:BitmapFont.ASCII});
 
  const myScene= new TextScene();
   app.stage.addChild(myScene);

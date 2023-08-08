@@ -32,8 +32,9 @@ export const assets = {
     pointer:"./demo/pointer.png",
     mifuente:"./Fuentes/VioletSans-Regular.ttf",
     fuente2:"./Fuentes/Minecraft.ttf",
-    fuente1:"./Fuentes/Mario-Kart-DS.ttf"
-    /*fuente: "https://fonts.googleapis.com/css2?family=Borel&display=swap"*/
+    fuente1:"./Fuentes/Mario.ttf",
+    fuente3:"./Fuentes/pixel.otf",
+    fuente: "https://fonts.googleapis.com/css2?family=Borel&display=swap"
   
 }
 
