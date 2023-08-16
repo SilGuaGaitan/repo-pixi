@@ -29,9 +29,9 @@ export class TextScene extends Container
      bt.y=300;
      this.addChild(bt);
 
-     const nt=new Text("HELLO",{fontFamily:"fuente"});
+     /*const nt=new Text("HELLO",{fontFamily:"Borel"});
      nt.y=150;
-     this.addChild(nt);
+     this.addChild(nt);*/
  }
    
 }

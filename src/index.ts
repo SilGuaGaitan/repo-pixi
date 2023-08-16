@@ -1,7 +1,8 @@
 import { Application, Assets, BitmapFont, TextStyle } from "pixi.js";
 import { assets } from "./assets";
 import { KeyBoard } from "./util/keyboard";
-import { TextScene } from "./Scenes/TextScene";
+//import { TextScene } from "./Scenes/TextScene";
+import { SpritesheetScene } from "./Scenes/SpritesheetScene";
 //import { TickerScene } from "./TickerScene";
 //import { SoundScene } from "./Scenes/SoundScene";
 
@@ -54,7 +55,7 @@ Assets.loadBundle(["myAssets"]).then(() => {
 	})
 	BitmapFont.from("MiBitMap",aux,{chars:BitmapFont.ASCII});
 
- const myScene= new TextScene();
+ const myScene= new SpritesheetScene();
   app.stage.addChild(myScene);
   /*Ticker.shared.add(function(deltaFrame){
 	myScene.update(Ticker.shared.deltaMS,deltaFrame);
