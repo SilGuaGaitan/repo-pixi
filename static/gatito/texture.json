@@ -1,0 +1,735 @@
+{
+  "frames": {
+    "platizq.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 1054,
+        "h": 355
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 16,
+        "w": 1054,
+        "h": 355
+      },
+      "sourceSize": {
+        "w": 1068,
+        "h": 371
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "platform.png": {
+      "frame": {
+        "x": 1060,
+        "y": 2,
+        "w": 819,
+        "h": 118
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 819,
+        "h": 118
+      },
+      "sourceSize": {
+        "w": 819,
+        "h": 118
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "arenero.png": {
+      "frame": {
+        "x": 1883,
+        "y": 2,
+        "w": 346,
+        "h": 157
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 35,
+        "w": 346,
+        "h": 157
+      },
+      "sourceSize": {
+        "w": 349,
+        "h": 192
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "platcomp.png": {
+      "frame": {
+        "x": 1060,
+        "y": 124,
+        "w": 817,
+        "h": 140
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 36,
+        "w": 817,
+        "h": 140
+      },
+      "sourceSize": {
+        "w": 850,
+        "h": 176
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "platder.png": {
+      "frame": {
+        "x": 1060,
+        "y": 268,
+        "w": 661,
+        "h": 391
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 43,
+        "w": 661,
+        "h": 391
+      },
+      "sourceSize": {
+        "w": 679,
+        "h": 434
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "alimento.png": {
+      "frame": {
+        "x": 1725,
+        "y": 352,
+        "w": 320,
+        "h": 165
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 21,
+        "w": 320,
+        "h": 165
+      },
+      "sourceSize": {
+        "w": 332,
+        "h": 197
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "dog5.png": {
+      "frame": {
+        "x": 1725,
+        "y": 521,
+        "w": 319,
+        "h": 652
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 131,
+        "y": 14,
+        "w": 319,
+        "h": 652
+      },
+      "sourceSize": {
+        "w": 666,
+        "h": 666
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "4.png": {
+      "frame": {
+        "x": 2,
+        "y": 1177,
+        "w": 584,
+        "h": 449
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 216,
+        "w": 584,
+        "h": 449
+      },
+      "sourceSize": {
+        "w": 665,
+        "h": 665
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gat6.png": {
+      "frame": {
+        "x": 2,
+        "y": 1765,
+        "w": 367,
+        "h": 276
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 12,
+        "w": 367,
+        "h": 276
+      },
+      "sourceSize": {
+        "w": 396,
+        "h": 303
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gat3.png": {
+      "frame": {
+        "x": 373,
+        "y": 1765,
+        "w": 349,
+        "h": 273
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 31,
+        "w": 349,
+        "h": 273
+      },
+      "sourceSize": {
+        "w": 375,
+        "h": 320
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gatito4.png": {
+      "frame": {
+        "x": 726,
+        "y": 361,
+        "w": 330,
+        "h": 268
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 6,
+        "w": 330,
+        "h": 268
+      },
+      "sourceSize": {
+        "w": 356,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gat2.png": {
+      "frame": {
+        "x": 455,
+        "y": 361,
+        "w": 372,
+        "h": 267
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 37,
+        "w": 372,
+        "h": 267
+      },
+      "sourceSize": {
+        "w": 383,
+        "h": 324
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "pez.png": {
+      "frame": {
+        "x": 726,
+        "y": 633,
+        "w": 326,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 0,
+        "w": 326,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 349,
+        "h": 177
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gat5.png": {
+      "frame": {
+        "x": 455,
+        "y": 737,
+        "w": 356,
+        "h": 266
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 356,
+        "h": 266
+      },
+      "sourceSize": {
+        "w": 380,
+        "h": 295
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "lana.png": {
+      "frame": {
+        "x": 2,
+        "y": 361,
+        "w": 442,
+        "h": 211
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 442,
+        "h": 211
+      },
+      "sourceSize": {
+        "w": 442,
+        "h": 214
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "cucha.png": {
+      "frame": {
+        "x": 2,
+        "y": 576,
+        "w": 413,
+        "h": 268
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 20,
+        "w": 413,
+        "h": 268
+      },
+      "sourceSize": {
+        "w": 418,
+        "h": 290
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gat1.png": {
+      "frame": {
+        "x": 2,
+        "y": 848,
+        "w": 362,
+        "h": 301
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 8,
+        "w": 362,
+        "h": 301
+      },
+      "sourceSize": {
+        "w": 370,
+        "h": 315
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "3.png": {
+      "frame": {
+        "x": 455,
+        "y": 1177,
+        "w": 537,
+        "h": 533
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 128,
+        "y": 4,
+        "w": 537,
+        "h": 533
+      },
+      "sourceSize": {
+        "w": 665,
+        "h": 665
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "0.png": {
+      "frame": {
+        "x": 725,
+        "y": 785,
+        "w": 355,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 148,
+        "y": 157,
+        "w": 355,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 665,
+        "h": 665
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "dog6.png": {
+      "frame": {
+        "x": 726,
+        "y": 1718,
+        "w": 319,
+        "h": 502
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 169,
+        "y": 2,
+        "w": 319,
+        "h": 502
+      },
+      "sourceSize": {
+        "w": 666,
+        "h": 666
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "2.png": {
+      "frame": {
+        "x": 992,
+        "y": 1177,
+        "w": 522,
+        "h": 339
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 184,
+        "w": 522,
+        "h": 339
+      },
+      "sourceSize": {
+        "w": 665,
+        "h": 665
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gatito5.png": {
+      "frame": {
+        "x": 1232,
+        "y": 1703,
+        "w": 341,
+        "h": 262
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 12,
+        "w": 341,
+        "h": 262
+      },
+      "sourceSize": {
+        "w": 356,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "raton.png": {
+      "frame": {
+        "x": 1498,
+        "y": 1703,
+        "w": 340,
+        "h": 137
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 14,
+        "w": 340,
+        "h": 137
+      },
+      "sourceSize": {
+        "w": 359,
+        "h": 177
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "1.png": {
+      "frame": {
+        "x": 1084,
+        "y": 663,
+        "w": 502,
+        "h": 344
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 177,
+        "w": 502,
+        "h": 344
+      },
+      "sourceSize": {
+        "w": 665,
+        "h": 665
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "dog7.png": {
+      "frame": {
+        "x": 1335,
+        "y": 1177,
+        "w": 301,
+        "h": 511
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 143,
+        "y": 0,
+        "w": 301,
+        "h": 511
+      },
+      "sourceSize": {
+        "w": 666,
+        "h": 666
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gat4.png": {
+      "frame": {
+        "x": 1639,
+        "y": 1692,
+        "w": 351,
+        "h": 252
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 21,
+        "w": 351,
+        "h": 252
+      },
+      "sourceSize": {
+        "w": 401,
+        "h": 296
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gatito6.png": {
+      "frame": {
+        "x": 1432,
+        "y": 663,
+        "w": 268,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 57,
+        "w": 268,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 356,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gatito3.png": {
+      "frame": {
+        "x": 1432,
+        "y": 869,
+        "w": 298,
+        "h": 244
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 16,
+        "w": 298,
+        "h": 244
+      },
+      "sourceSize": {
+        "w": 356,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gatito2.png": {
+      "frame": {
+        "x": 1640,
+        "y": 1177,
+        "w": 345,
+        "h": 245
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 345,
+        "h": 245
+      },
+      "sourceSize": {
+        "w": 356,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "gatito1.png": {
+      "frame": {
+        "x": 1640,
+        "y": 1426,
+        "w": 331,
+        "h": 257
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 11,
+        "w": 331,
+        "h": 257
+      },
+      "sourceSize": {
+        "w": 356,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": 1
+  }
+}

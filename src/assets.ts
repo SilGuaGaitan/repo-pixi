@@ -1,5 +1,5 @@
 export const assets = {
-    elefante: "./ele.png",
+   /* elefante: "./ele.png",
     gorrito: "./gorito_cumple.png",
     /*espada:"./demo/espada.png",
     nota:"./demo/nota.png",
@@ -7,7 +7,7 @@ export const assets = {
     menos:"./demo/menos.png",
     sonido:"./Sonido/espada.mp3",*/
 
-    cat1:"./gatito/gatito1.png",
+  /*  cat1:"./gatito/gatito1.png",
     cat2:"./gatito/gatito2.png",
     cat3:"./gatito/gatito3.png",
     cat4:"./gatito/gatito4.png",
@@ -34,11 +34,9 @@ export const assets = {
     fuente2:"./Fuentes/Minecraft.ttf",
     fuente1:"./Fuentes/Mario.ttf",
     fuente3:"./Fuentes/pixel.otf",
-    //fuente: "https://fonts.googleapis.com/css2?family=Borel&display=swap",
-    perrito:"./gatito/texture-0.png",
-    perrito1:"./gatito/texture-1.png",
-    perrito2:"./gatito/texture-2.png",
-    perritos:"./gatito/perritos.png"
+    //fuente: "https://fonts.googleapis.com/css2?family=Borel&display=swap",*/
+    sabana:"./gatito/texture.json",
+    packcat:"./gatito/pack_gatito.jpg"
   
 }
 

@@ -1,21 +1,31 @@
 import { Container, Sprite, Spritesheet, Texture } from "pixi.js";
 
+
 export class SpritesheetScene  extends Container{
     constructor (){
         super();
-       /* const perro= Sprite.from("perrito");
+        const perro = Sprite.from("gatito/perro/0.png");
         perro.scale.set(0.2);
-        this.addChild(perro);*/
+        this.addChild(perro);
+        const raton=Sprite.from("gatito/juguetes/raton.png");
+        raton.position.set(150,50);
+        raton.scale.set(0.2);
+        this. addChild(raton);
+        const otroperro=Sprite.from("gatito/perro/3.png");
+        otroperro.scale.set(0.2);
+        otroperro.position.set(300,50);
+        this.addChild(otroperro);
 
-        const spritesheet= new Spritesheet(Texture.from("perritos"),
+        
+        const spritesheet= new Spritesheet(Texture.from("packcat"),
         {
             frames:{
-                "dog1":{
+                "cat1":{
                     frame:{
                         x:0,
                         y:0,
-                        w:665,
-                        h:665
+                        w:1000,
+                        h:500
                     }
                 }
             },
@@ -24,8 +34,8 @@ export class SpritesheetScene  extends Container{
             }
         });
         spritesheet.parse(()=>{
-            const dog = new Sprite.from("perritos");
-            this.addChild(dog);
+            const cat = new Sprite.from("cat1");
+            this.addChild(cat);
         });
     }
     public update()
