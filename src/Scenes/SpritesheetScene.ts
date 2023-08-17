@@ -25,18 +25,19 @@ export class SpritesheetScene  extends Container{
                         x:0,
                         y:0,
                         w:1000,
-                        h:500
+                        h:1000
                     }
                 }
             },
             meta:{
-                scale:"0.5"
+                scale:"4"
             }
         });
-        spritesheet.parse(()=>{
-            const cat = new Sprite.from("cat1");
+        spritesheet.parse();
+            const cat= Sprite.from("cat1");
+            cat.position.set(200,200);
             this.addChild(cat);
-        });
+        
     }
     public update()
     {
