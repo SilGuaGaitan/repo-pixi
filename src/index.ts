@@ -1,9 +1,12 @@
-import { Application, Assets, BitmapFont, TextStyle } from "pixi.js";
+import { Application, Assets, BitmapFont, TextStyle, Ticker } from "pixi.js";
 import { assets } from "./assets";
-import { KeyBoard } from "./util/keyboard";
+//import { KeyBoard } from "./util/keyboard";
+import { AnimationScene } from "./Scenes/AnimationScene";
+//import { TweenScene } from "./Scenes/TweenScene";
+import { Group } from "tweedle.js";
 //import { TextScene } from "./Scenes/TextScene";
-import { SpritesheetScene } from "./Scenes/SpritesheetScene";
-//import { TickerScene } from "./TickerScene";
+//import { SpritesheetScene } from "./Scenes/SpritesheetScene";
+//import { TickerScene } from "./Scenes/TickerScene";
 //import { SoundScene } from "./Scenes/SoundScene";
 
 export const WIDTH=640;
@@ -17,7 +20,7 @@ const app = new Application({
 	width: WIDTH,
 	height: HEIGHT
 });
-KeyBoard.initialize();
+//KeyBoard.initialize();
 window.addEventListener("resize",()=>{
 	console.log("resized!");
 	const scaleX = window.innerWidth / app.screen.width;
@@ -55,10 +58,11 @@ Assets.loadBundle(["myAssets"]).then(() => {
 	})
 	BitmapFont.from("MiBitMap",aux,{chars:BitmapFont.ASCII});
 
- const myScene= new SpritesheetScene();
+ const myScene= new AnimationScene();
   app.stage.addChild(myScene);
-  /*Ticker.shared.add(function(deltaFrame){
-	myScene.update(Ticker.shared.deltaMS,deltaFrame);
+    Ticker.shared.add(function(){
+		Group.shared.update()
+	    myScene.update();
   
-  })*/
+  })
 });

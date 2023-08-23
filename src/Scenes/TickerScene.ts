@@ -1,10 +1,10 @@
 import { Container, Texture, TilingSprite} from "pixi.js";
-import { IUpdateable } from "./IUpdateable";
+import { IUpdateable } from "../IUpdateable";
 
-import { HEIGHT, WIDTH } from ".";
-import { Player } from "./game/Player";
-import { Platform } from "./game/Platform";
-import { checkcollision } from "./game/IHitbox";
+import { HEIGHT, WIDTH } from "..";
+import { Player } from "../game/Player";
+import { Platform } from "../game/Platform";
+import { checkcollision } from "../game/IHitbox";
 
 export class TickerScene extends Container implements IUpdateable{
     private playerCat: Player;
