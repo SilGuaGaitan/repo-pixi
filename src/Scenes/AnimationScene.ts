@@ -1,35 +1,28 @@
-import { Container } from "pixi.js";
+import {  Container, Texture } from "pixi.js";
+import { StateAnimation } from "../game/StateAnimation";
 
-export class AnimationScene extends Container()
+export class AnimationScene extends Container
 {
+   
+    private perro :StateAnimation;
     constructor(){
         super();
-        const quiet=new AnimationScene(["dog4"]);
-        this.quiet.animationspeed = 0.12;
-        this.quiet.play();
+      
 
-        const jump=new AnimationScene(["dog6","dog7","dog5"]);
-        this.jump.animationspeed=0.12;
-        this.jump.play();
-
-        const run=new AnimationScene(["dog1","dog2","dog3"]);
-        this.run.animationspeed=0.12;
-        this.run.play();
-
-        const perro =new Container();
+        const perro = new StateAnimation();
         this.perro.position.set(100,300);
         this.perro.scale.set(0.5);
-        this.perro.addChild(this.quiet,this.run,this.jump);
-        this.addChild(this.perro);
+        this.addChild(perro);
 
-        this.jump.visible=false;
-        this.quiet.visible=true;
-        this.run.visible=false;
+       this.perro.addState("run",["dog1","dog2","dog3" ]);
+       this.perro.addState("jump",[Texture.from("dog6"),Texture.from("dog7"),Texture.from("dog5")]);
+       this.perro.addState("quiet",[Texture.from("dog4")])
+
+       this.perro.playState("run");
     }
     public update(frame:number)
     {
-        this.run.update(frame);
-        this.quiet.update(frame);
-        this.jump.update(frame);
+        this.perro.update(frame);
+      
     }
 }
