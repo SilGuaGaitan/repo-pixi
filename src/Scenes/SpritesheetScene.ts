@@ -33,10 +33,11 @@ export class SpritesheetScene  extends Container{
                 scale:"4"
             }
         });
-        spritesheet.parse();
+        spritesheet.parse().then(()=>{
             const cat= Sprite.from("cat1");
             cat.position.set(200,200);
             this.addChild(cat);
+        });    
         
     }
     public update()

@@ -62,7 +62,7 @@ Assets.loadBundle(["myAssets"]).then(() => {
   app.stage.addChild(myScene);
     Ticker.shared.add(function(){
 		Group.shared.update()
-	    myScene.update();
+	    myScene.update(Ticker.shared.deltaMS);
   
   })
 });

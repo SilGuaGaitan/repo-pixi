@@ -9,12 +9,12 @@ export class AnimationScene extends Container
         super();
       
 
-        const perro = new StateAnimation();
-        this.perro.position.set(100,300);
+        this.perro = new StateAnimation();
+        this.perro.position.set(100,200);
         this.perro.scale.set(0.5);
-        this.addChild(perro);
+        this.addChild(this.perro);
 
-       this.perro.addState("run",["dog1","dog2","dog3" ]);
+       this.perro.addState("run",["dog1","dog2" ]);
        this.perro.addState("jump",[Texture.from("dog6"),Texture.from("dog7"),Texture.from("dog5")]);
        this.perro.addState("quiet",[Texture.from("dog4")])
 

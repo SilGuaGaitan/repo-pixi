@@ -12,7 +12,7 @@ export class StateAnimation extends Container
         }
         
     }
-    public addState(statename: string, frames:Texture[]|string[]) {
+    public addState(statename: string, frames:Texture[]|string[], animationSpeed:number=0.12, loop:boolean=true) {
       const textarray:Texture[]=[];
          for(const tex of frames){
             if(typeof tex== "string")
@@ -25,6 +25,8 @@ export class StateAnimation extends Container
             }
             const  tempAnim:AnimatedSprite =new AnimatedSprite(textarray);
             tempAnim.play();
+            tempAnim.animationSpeed= animationSpeed;
+            tempAnim.loop = loop;
             this.states.set(statename,tempAnim);
         }
          
