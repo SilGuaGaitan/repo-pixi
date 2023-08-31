@@ -30,15 +30,15 @@ export class AnimationScene extends Container
        this.tierra.spawnPos.y=200;
        this.tierra.emit=true;
        this.tierra.autoUpdate=true;
-       // this.interactive=true;
+       this.interactive=true;
         this.on("mousedown", (e)=>{
             this.tierra.spawnPos.copyFrom(e.data.global);
             this.tierra.updateSpawnPos(e.data.global.x , e.data.global.y);
         });
     }
-    public update(frame:number, deltaSecond:number)
+    public update(_frame:number, deltaSecond:number)
     {
-        this.perro.update(frame);
+       // this.perro.update(frame);
         this.tierra.update(deltaSecond);
       
     }
