@@ -3,6 +3,7 @@ import { AnimatedSprite, Container, Texture } from "pixi.js";
 export class StateAnimation extends Container
 {
     private states:Map<string,AnimatedSprite> =new Map;
+    tierra: any;
     public playState(statename: string) {
         this.removeChildren();
         const currentstate = this.states.get(statename);
@@ -35,6 +36,7 @@ export class StateAnimation extends Container
     {
         for(const state of this.states.values()){
             state.update(frames);
+            this.tierra.update();
         }
     }
 

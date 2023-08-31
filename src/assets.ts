@@ -35,16 +35,17 @@ export const assets = {
     fuente1:"./Fuentes/Mario.ttf",
     fuente3:"./Fuentes/pixel.otf",
     //fuente: "https://fonts.googleapis.com/css2?family=Borel&display=swap",*/
-    sabana:"./gatito/texture.json",
-    packcat:"./gatito/pack_gatito.jpg",
-    moneda:"./gatito/moneda.png",
+    //sabana:"./gatito/texture.json",
+    //packcat:"./gatito/pack_gatito.jpg",
+    //moneda:"./gatito/moneda.png",
     dog1:"./perro/1.png",
     dog2:"./perro/2.png",
     dog3:"./perro/3.png",
     dog4:"./perro/4.png",
     dog5:"./perro/dog5.png",
     dog6:"./perro/dog6.png",
-    dog7:"./perro/dog7.png"
+    dog7:"./perro/dog7.png",
+    tierra:"./particle1.png"
   
 }
 

@@ -1,9 +1,9 @@
-import { Application, Assets, BitmapFont, TextStyle, Ticker } from "pixi.js";
+import { Application, Assets,  Ticker } from "pixi.js";
 import { assets } from "./assets";
 //import { KeyBoard } from "./util/keyboard";
-import { AnimationScene } from "./Scenes/AnimationScene";
 //import { TweenScene } from "./Scenes/TweenScene";
 import { Group } from "tweedle.js";
+import { AnimationScene } from "./Scenes/AnimationScene";
 //import { TextScene } from "./Scenes/TextScene";
 //import { SpritesheetScene } from "./Scenes/SpritesheetScene";
 //import { TickerScene } from "./Scenes/TickerScene";
@@ -16,7 +16,7 @@ const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
-	backgroundColor: 0xFFFFFF,
+	backgroundColor: 0xB2FFFF,
 	width: WIDTH,
 	height: HEIGHT
 });
@@ -40,29 +40,17 @@ window.addEventListener("resize",()=>{
     (app.view.style as any).marginTop = marginVertical ;
     (app.view.style as any).marginBottom = marginVertical ; 
 	
-})
+});
 window.dispatchEvent(new Event("resize"));
 
 Assets.addBundle("myAssets", assets); 
 
 Assets.loadBundle(["myAssets"]).then(() => {
-	const aux=new TextStyle({
-		align: "center",
-        fill: [
-            "#0c5764",
-            "#FF00FF"
-        ],
-        fontFamily: "Minecraft",
-        fontSize: 60
-       
-	})
-	BitmapFont.from("MiBitMap",aux,{chars:BitmapFont.ASCII});
-
- const myScene= new AnimationScene();
-  app.stage.addChild(myScene);
-    Ticker.shared.add(function(){
+	const myScene= new AnimationScene();
+     app.stage.addChild(myScene);
+     Ticker.shared.add(function(frame){
 		Group.shared.update()
-	    myScene.update(Ticker.shared.deltaMS);
+	    myScene.update(frame, Ticker.shared.deltaMS /1000);
   
-  })
+  });
 });
