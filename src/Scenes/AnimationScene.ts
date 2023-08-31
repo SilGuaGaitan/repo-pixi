@@ -1,7 +1,8 @@
-import {  Container, Texture } from "pixi.js";
+import {  Container, Sprite, Texture } from "pixi.js";
 import { StateAnimation } from "../game/StateAnimation";
 import * as tierrapart from "../game/tierrapart.json";
 import { Emitter, LinkedListContainer, upgradeConfig } from "@pixi/particle-emitter";
+import {DotFilter} from "@pixi/filter-dot";
 
 export class AnimationScene extends Container
 {
@@ -11,9 +12,13 @@ export class AnimationScene extends Container
     private tierracontainer: LinkedListContainer;
     constructor(){
         super();
-      
+        const bg= Sprite.from("selva");
+        this.addChild(bg);
+        
         this.tierracontainer=new LinkedListContainer();
         this.addChild(this.tierracontainer);
+        
+        
         this.perro = new StateAnimation();
         this.perro.position.set(100,200);
         this.perro.scale.set(0.5);
@@ -35,6 +40,10 @@ export class AnimationScene extends Container
             this.tierra.spawnPos.copyFrom(e.data.global);
             this.tierra.updateSpawnPos(e.data.global.x , e.data.global.y);
         });
+        const mylook =new DotFilter ();
+        mylook.resolution=10;
+        this.filters =[mylook];
+      
     }
     public update(_frame:number, deltaSecond:number)
     {

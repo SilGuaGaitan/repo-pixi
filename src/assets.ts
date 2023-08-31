@@ -13,7 +13,7 @@ export const assets = {
     cat4:"./gatito/gatito4.png",
     cat5:"./gatito/gatito5.png",
     cat6:"./gatito/gatito6.png",
-    selva:"./gatito/selva.png",
+    
     plat:"./gatito/platcomp.png",
    
     estrellaa:"./panel/estrella dorada.png",
@@ -38,6 +38,7 @@ export const assets = {
     //sabana:"./gatito/texture.json",
     //packcat:"./gatito/pack_gatito.jpg",
     //moneda:"./gatito/moneda.png",
+    selva:"./gatito/selva.png",
     dog1:"./perro/1.png",
     dog2:"./perro/2.png",
     dog3:"./perro/3.png",
