@@ -1,10 +1,9 @@
 import { Container, Texture, TilingSprite} from "pixi.js";
 import { IUpdateable } from "../IUpdateable";
-
-import { HEIGHT, WIDTH } from "..";
 import { Player } from "../game/Player";
 import { Platform } from "../game/Platform";
 import { checkcollision } from "../game/IHitbox";
+import { SceneManager } from "../util/SceneManager";
 
 export class TickerScene extends Container implements IUpdateable{
     private playerCat: Player;
@@ -18,7 +17,7 @@ export class TickerScene extends Container implements IUpdateable{
     {
         super();
         this.world =new Container();
-        this.background = new TilingSprite(Texture.from("selva"),WIDTH ,HEIGHT);
+        this.background = new TilingSprite(Texture.from("selva"),SceneManager.WIDTH,SceneManager.HEIGHT);
             this.addChild(this.background);
 
         this.platforms=[];
@@ -50,7 +49,7 @@ export class TickerScene extends Container implements IUpdateable{
             this.timepassed=0;
             const plat = new Platform();
             plat.scale.set(0.25);
-            plat.position.set(WIDTH,Math.random()*480) ;
+            plat.position.set(SceneManager.WIDTH,Math.random()*480) ;
             this.world.addChild(plat);
             this.platforms.push(plat);   
         }

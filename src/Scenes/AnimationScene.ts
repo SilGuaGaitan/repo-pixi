@@ -1,10 +1,11 @@
-import {  Container, Sprite, Texture } from "pixi.js";
+import {  Sprite, Texture } from "pixi.js";
 import { StateAnimation } from "../game/StateAnimation";
 import * as tierrapart from "../game/tierrapart.json";
 import { Emitter, LinkedListContainer, upgradeConfig } from "@pixi/particle-emitter";
 import {DotFilter} from "@pixi/filter-dot";
+import { SceneBase } from "../util/SceneBase";
 
-export class AnimationScene extends Container
+export class AnimationScene extends SceneBase
 {
    
     private perro :StateAnimation;
@@ -45,10 +46,10 @@ export class AnimationScene extends Container
         this.filters =[mylook];
       
     }
-    public update(_frame:number, deltaSecond:number)
+    public update(_frame:number, deltaMS:number)
     {
        // this.perro.update(frame);
-        this.tierra.update(deltaSecond);
+        this.tierra.update(deltaMS/1000);
       
     }
 }

@@ -19,7 +19,7 @@ export const assets = {
     estrellaa:"./panel/estrella dorada.png",
     fondo:"./panel/fondo_estrella.jpg",
     botonc:"./panel/boton-cerrar.png",
-    botonok:"./panel/boton-ok.png",
+    
     botonokover:"./panel/boton-ok-over.png",
     botonokon:"./panel/boton-ok-on.png",
     botoncon:"./panel/boton-config.png",
@@ -38,6 +38,7 @@ export const assets = {
     //sabana:"./gatito/texture.json",
     //packcat:"./gatito/pack_gatito.jpg",
     //moneda:"./gatito/moneda.png",
+    btnok:"./panel/boton-ok.png",
     selva:"./gatito/selva.png",
     dog1:"./perro/1.png",
     dog2:"./perro/2.png",
