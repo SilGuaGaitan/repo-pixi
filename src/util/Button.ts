@@ -1,33 +1,25 @@
-import { Container, Sprite, Texture } from "pixi.js";
-import { MenuScene } from "../Scenes/MenuScene";
+import { Container, Sprite } from "pixi.js";
+
 
 
 export class Button extends Container{
-    static CLIKED_EVENT(CLIKED_EVENT: any) {
-        throw new Error("Method not implemented.");
-    }
-
-    
-    private def: Texture;
-   
     private spr: Sprite;
 
-    constructor(def: Texture)
+    constructor()
     {
         super();
-        this.def= def;
-       
-        this.spr= Sprite.from(def);
+        
+        this.spr= Sprite.from("btnok");
         this.scale.set(0.1);
         this.position.set(100,100);
         this.addChild(this.spr);
         this.spr.interactive = true;
-        this.spr.on("mousedown",this.onMouseDown,this);
+       // this.spr.on(spr.CLIKED_EVENT,this);
        
     }
-    private onMouseDown():void{
+    private CLIKED_EVENT(){
         console.log("boton clikeado",this);
-        this.spr.texture = this.def;
+        
     }
    
 }

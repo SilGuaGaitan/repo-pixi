@@ -55,8 +55,10 @@ export namespace SceneManager{
     {
         if (currentScene)
         {
+            console.log("destruir escena actual");
             currentScene.destroy;
         }
+        console.log("mostrar la nueva",newScene);
         currentScene=newScene;
         app.stage.addChild(currentScene);
 
