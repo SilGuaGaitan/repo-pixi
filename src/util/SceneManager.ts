@@ -1,6 +1,6 @@
 import { Application, Ticker } from "pixi.js";
 import { KeyBoard } from "./keyboard";
-import { SceneBase } from "./SceneBase";
+import { SceneBase } from "../Scenes/SceneBase";
 import { Group } from "tweedle.js";
 
 export namespace SceneManager{

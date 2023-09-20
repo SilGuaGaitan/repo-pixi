@@ -14,12 +14,9 @@ export class Button extends Container{
         this.position.set(100,100);
         this.addChild(this.spr);
         this.spr.interactive = true;
-       // this.spr.on(spr.CLIKED_EVENT,this);
+       
        
     }
-    private CLIKED_EVENT(){
-        console.log("boton clikeado",this);
-        
-    }
+   
    
 }

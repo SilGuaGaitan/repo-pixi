@@ -3,7 +3,7 @@ import { StateAnimation } from "../game/StateAnimation";
 import * as tierrapart from "../game/tierrapart.json";
 import { Emitter, LinkedListContainer, upgradeConfig } from "@pixi/particle-emitter";
 import {DotFilter} from "@pixi/filter-dot";
-import { SceneBase } from "../util/SceneBase";
+import { SceneBase } from "./SceneBase";
 
 export class AnimationScene extends SceneBase
 {

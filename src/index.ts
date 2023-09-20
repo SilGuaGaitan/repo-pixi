@@ -4,15 +4,16 @@
 //import { TweenScene } from "./Scenes/TweenScene";
 
 //import { AnimationScene } from "./Scenes/AnimationScene";
-//import { MenuScene } from "./Scenes/MenuScene";
 import { SceneManager } from "./util/SceneManager";
-import { loaderScene } from "./Scenes/loaderScene";
+//import { loaderScene } from "./Scenes/loaderScene";
+
+import { MenuScene } from "./Scenes/MenuScene";
 //import { TextScene } from "./Scenes/TextScene";
 //import { SpritesheetScene } from "./Scenes/SpritesheetScene";
 //import { TickerScene } from "./Scenes/TickerScene";
 //import { SoundScene } from "./Scenes/SoundScene";
 
 SceneManager.initialize();
-	SceneManager.changeScene(new );
+	SceneManager.changeScene(new MenuScene );
 
 

@@ -1,6 +1,6 @@
 //import { Container } from "pixi.js";
-import { Assets, Graphics, Loader } from "pixi.js";
-import { SceneBase } from "../util/SceneBase";
+import { Assets, Graphics } from "pixi.js";
+import { SceneBase } from "./SceneBase";
 import { SceneManager } from "../util/SceneManager";
 import { MenuScene } from "./MenuScene";
 import { assets } from "../assets";
