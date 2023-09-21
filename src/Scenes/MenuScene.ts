@@ -1,7 +1,8 @@
 import { SceneBase } from "./SceneBase";
 import { AnimationScene } from "./AnimationScene";
 import { SceneManager } from "../util/SceneManager";
-import { Button } from "../util/Button";
+import { Sprite } from "pixi.js";
+
 
 
 
@@ -9,8 +10,11 @@ export class MenuScene extends SceneBase {
     public update(): void {}
     constructor() {
         super();
-        const btn = new Button();
+        const btn = Sprite.from("btnok");
+        btn.scale.set(0.1);
+        btn.position.set(100,100);
         btn.on("mousedown",this.goToGame, this);
+        btn.interactive=true;
         btn.x = 300;
         btn.y = 200;
         this.addChild(btn);

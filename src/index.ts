@@ -8,6 +8,7 @@ import { SceneManager } from "./util/SceneManager";
 //import { loaderScene } from "./Scenes/loaderScene";
 
 import { MenuScene } from "./Scenes/MenuScene";
+//import { loaderScene } from "./Scenes/loaderScene";
 //import { TextScene } from "./Scenes/TextScene";
 //import { SpritesheetScene } from "./Scenes/SpritesheetScene";
 //import { TickerScene } from "./Scenes/TickerScene";

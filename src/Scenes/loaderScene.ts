@@ -25,7 +25,7 @@ export class loaderScene extends SceneBase{
     private downAssets()
     {
         Assets.addBundle("myAssets", assets); 
-        Assets.loadBundle(["myAssets"]).then(()=>{
+        Assets.loadBundle(["myAssets"], this.setBarPercent.bind(this)).then(()=>{
             this.whenLoaderFinished.bind(this);
             
         });

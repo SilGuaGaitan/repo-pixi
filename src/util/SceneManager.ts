@@ -56,7 +56,7 @@ export namespace SceneManager{
         if (currentScene)
         {
             console.log("destruir escena actual");
-            currentScene.destroy;
+            currentScene.destroy();
         }
         console.log("mostrar la nueva",newScene);
         currentScene=newScene;
