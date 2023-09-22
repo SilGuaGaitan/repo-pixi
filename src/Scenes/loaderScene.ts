@@ -26,7 +26,7 @@ export class loaderScene extends SceneBase{
     {
         Assets.addBundle("myAssets", assets); 
         Assets.loadBundle(["myAssets"], this.setBarPercent.bind(this)).then(()=>{
-            this.whenLoaderFinished.bind(this);
+            this.whenLoaderFinished();
             
         });
     }
@@ -45,6 +45,6 @@ export class loaderScene extends SceneBase{
     }
     private whenLoaderFinished()
     {
-        SceneManager.changeScene(new MenuScene());
+        SceneManager.changeScene(new MenuScene);
     }
 }

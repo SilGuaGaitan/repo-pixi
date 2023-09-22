@@ -5,9 +5,9 @@
 
 //import { AnimationScene } from "./Scenes/AnimationScene";
 import { SceneManager } from "./util/SceneManager";
-//import { loaderScene } from "./Scenes/loaderScene";
+import { loaderScene } from "./Scenes/loaderScene";
 
-import { MenuScene } from "./Scenes/MenuScene";
+//import { MenuScene } from "./Scenes/MenuScene";
 //import { loaderScene } from "./Scenes/loaderScene";
 //import { TextScene } from "./Scenes/TextScene";
 //import { SpritesheetScene } from "./Scenes/SpritesheetScene";
@@ -15,6 +15,6 @@ import { MenuScene } from "./Scenes/MenuScene";
 //import { SoundScene } from "./Scenes/SoundScene";
 
 SceneManager.initialize();
-	SceneManager.changeScene(new MenuScene );
+	SceneManager.changeScene(new loaderScene );
 
 
