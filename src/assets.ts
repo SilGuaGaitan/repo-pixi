@@ -7,16 +7,16 @@ export const assets = {
     menos:"./demo/menos.png",
     sonido:"./Sonido/espada.mp3",*/
 
-  /*  cat1:"./gatito/gatito1.png",
-    cat2:"./gatito/gatito2.png",
-    cat3:"./gatito/gatito3.png",
-    cat4:"./gatito/gatito4.png",
-    cat5:"./gatito/gatito5.png",
-    cat6:"./gatito/gatito6.png",
+    cat1:"../gatito/gat/gat1.png",
+    cat2:"../gatito/gat/gat2.png",
+    cat3:"../gatito/gat/gat3.png",
+    cat4:"../gatito/gat/gat4.png",
+    cat5:"../gatito/gat/gat5.png",
+    cat6:"../gatito/gat/gat6.png",
     
-    plat:"./gatito/platcomp.png",
+    plat:"../gatito/plat/platform.png",
    
-    estrellaa:"./panel/estrella dorada.png",
+  /*  estrellaa:"./panel/estrella dorada.png",
     fondo:"./panel/fondo_estrella.jpg",
     botonc:"./panel/boton-cerrar.png",
     

@@ -1,7 +1,8 @@
 import { SceneBase } from "./SceneBase";
-import { AnimationScene } from "./AnimationScene";
+//import { AnimationScene } from "./AnimationScene";
 import { SceneManager } from "../util/SceneManager";
 import { Sprite } from "pixi.js";
+import { TickerScene } from "./TickerScene";
 
 
 
@@ -22,6 +23,6 @@ export class MenuScene extends SceneBase {
     }
     private goToGame() {
         console.log("button clicked");
-        SceneManager.changeScene(new AnimationScene());
+        SceneManager.changeScene(new TickerScene);
     }
 }
