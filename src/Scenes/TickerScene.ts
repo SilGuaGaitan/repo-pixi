@@ -63,7 +63,7 @@ export class TickerScene extends Container implements IUpdateable{
             this.playerCat.separate(overlap, platform.position);
            
          }
-         if(this.platform.gethitbox().right< 0)
+         if(platform.gethitbox().right< 0)
          {
             platform.destroy();
          }

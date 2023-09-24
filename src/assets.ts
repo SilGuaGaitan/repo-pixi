@@ -13,7 +13,7 @@ export const assets = {
     cat4:"../gatito/gat/gat4.png",
     cat5:"../gatito/gat/gat5.png",
     cat6:"../gatito/gat/gat6.png",
-    
+    moneda:"./gatito/moneda.png",
     plat:"../gatito/plat/platform.png",
    
   /*  estrellaa:"./panel/estrella dorada.png",
@@ -37,7 +37,7 @@ export const assets = {
     //fuente: "https://fonts.googleapis.com/css2?family=Borel&display=swap",*/
     //sabana:"./gatito/texture.json",
     //packcat:"./gatito/pack_gatito.jpg",
-    //moneda:"./gatito/moneda.png",
+    //
     btnok:"./panel/boton-ok.png",
     selva:"./gatito/selva.png",
     dog1:"./perro/1.png",

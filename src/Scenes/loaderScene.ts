@@ -19,10 +19,10 @@ export class loaderScene extends SceneBase{
         this.bar.pivot.x=this.bar.width /2;
         this.bar.pivot.y=this.bar.height/2;
         this.addChild(this.bar);
-        this.downAssets();
+        this.downloadAssets();
         
     }
-    private downAssets()
+    private downloadAssets()
     {
         Assets.addBundle("myAssets", assets); 
         Assets.loadBundle(["myAssets"], this.setBarPercent.bind(this)).then(()=>{
@@ -37,6 +37,7 @@ export class loaderScene extends SceneBase{
         this.bar.beginFill(0xFF0000,1);
         this.bar.drawRect(0,0, SceneManager.WIDTH *0.8 * factor, 50);
         this.bar.endFill();
+        
         this.bar.lineStyle(5,0xFFFFFF,1);
        // this.bar.beginFill(0x000000);
         this.bar.drawRect(0,0, SceneManager.WIDTH *0.8, 50);
